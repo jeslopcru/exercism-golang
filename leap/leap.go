@@ -2,9 +2,10 @@ package leap
 
 func IsLeapYear(aNumber int) bool {
 
-	isDivisibleByFour := aNumber%4 == 0
-	isNotDivisibleByOneHundred := aNumber%100 != 0
-	isDivisibleByFourHundred := aNumber%400 == 0
+	notDivisibleFor100 := isDivisible(aNumber, 100) == false
+	return isDivisible(aNumber, 4) && (notDivisibleFor100 || isDivisible(aNumber, 400))
+}
 
-	return isDivisibleByFour && (isNotDivisibleByOneHundred || isDivisibleByFourHundred)
+func isDivisible(a int, b int) bool {
+	return a%b == 0
 }
