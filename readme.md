@@ -6,3 +6,4 @@
 - [clock-without-date](./clock-without-date)
 - [clock](./clock)
 - [gigasecond](./gigasecond)
+- [acronym](./acronym)
